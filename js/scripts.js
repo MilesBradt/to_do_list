@@ -26,10 +26,5 @@ $(document).ready(function() {
       console.log(taskIndex);
       // $('li#item'+count).hide();
     });
-
   });
 });
-
-
-'item"+count+"'
-"li#' + taskIndex+'"
