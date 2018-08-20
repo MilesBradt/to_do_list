@@ -1,4 +1,4 @@
-var toDo = 0;
+var count = 0;
 var tasks = [];
 
 $(document).ready(function() {
@@ -6,7 +6,11 @@ $(document).ready(function() {
     event.preventDefault();
     $("input#userInput").each(function(){
       var userInput = $(this).val();
-      console.log(userInput);
+      userInput = userInput.toString();
+      tasks.push(userInput)
+      $("ul#outputTasks").append("<li>" + tasks[count] + "</li>");
+      count ++;
+      console.log(tasks);
     });
   });
 });
