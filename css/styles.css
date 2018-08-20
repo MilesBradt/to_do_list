@@ -1,6 +1,17 @@
+#output {
+  display: hide;
+  font-size: 1.2em;
+}
+
+
+.doneBtn {
+  color: #BDD2E8;
+  background-color: #385070;
+}
+
+
 .form-group {
   width: 250px;
-  
   display: flex;
   margin: 0 auto;
 }
