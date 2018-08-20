@@ -1,9 +1,4 @@
-// function ToDo(task, id) {
-//   userInput = task;
-//   count = id;
-// }
-
-var count = 0;
+var count = 0; //assigns id number
 var tasks = [];
 
 $(document).ready(function() {
@@ -13,18 +8,16 @@ $(document).ready(function() {
       $("#output").show();
       var userInput = $(this).val();
       userInput = userInput.toString();
-      // var list'+count+' = new ToDo(task, id);
       tasks.push(userInput);
+      //add dynamic id
       $("ul#outputTasks").append("<li id='item"+count+"'>" + tasks[count] + "&nbsp" + "&nbsp" + "<button id='item"+count+"' class='btn doneBtn'>Done</button>" + "<br>" + "<br>" + "</li>");
       count ++;
 
     });
+    //find dynamic id
     $(".doneBtn").click(function(event){
-      console.log(count);
       var taskIndex = $(this).attr("id");
       $("li#"+taskIndex).hide();
-      console.log(taskIndex);
-      // $('li#item'+count).hide();
     });
   });
 });
